@@ -1,0 +1,118 @@
+/* Ensure the html and body take up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* General styles for the Admission page */
+.admission-page {
+  background: url('https://img.freepik.com/free-vector/gradient-grainy-texture_23-2148976750.jpg') no-repeat center center;
+  background-size: cover; /* Cover the entire container */
+  min-height: 100vh;
+  padding-top: 0; /* Remove top padding to ensure container touches navbar */
+}
+
+/* Semi-transparent overlay for background */
+.page-background2 {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 0; /* Remove padding to ensure container touches navbar */
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+  min-height: 100vh; /* Ensure it covers the full height */
+}
+
+/* Container styles */
+.container {
+  background: #ffffff; /* White background for the container */
+  padding: 20px; /* Reduced padding for a smaller container */
+  border-radius: 8px;
+  max-width: 800px; /* Adjusted max-width for a smaller container */
+  width: 100%; /* Ensure container takes full width available */
+  margin: 0 auto; /* Center container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.container h2 {
+  margin-bottom: 20px;
+  color: #003a71; /* Dark Blue */
+  text-align: center;
+  font-size: 24px; /* Set a consistent font size */
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+.form-group label {
+  flex: 0 0 200px; /* Fixed width for labels */
+  margin-right: 20px; /* Space between label and input */
+  font-weight: bold;
+}
+
+.form-group label::after {
+  content: ":"; /* Add colon after label */
+  margin-left: 5px; /* Space between label text and colon */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  flex: 1; /* Take the remaining space */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px; /* Adjusted padding for a smaller button */
+  background-color: #003a71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjusted font size for the button */
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004b87;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Ensure full width on smaller screens */
+  }
+
+  .form-group {
+    flex-direction: column; /* Stack label and input vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .form-group label {
+    margin-right: 0; /* Remove margin-right for vertical stacking */
+    margin-bottom: 5px; /* Add some space below the label */
+    width: auto; /* Allow label width to be auto on small screens */
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%; /* Ensure full width on smaller screens */
+  }
+
+  button {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}

@@ -1,0 +1,170 @@
+/* Hero Section */
+.hero-section {
+  background: url('https://img.freepik.com/free-vector/gradient-grainy-texture_23-2148976750.jpg') no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for better text contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+.hero-section h1 {
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 28px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #004b87;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #003366;
+}
+
+/* About Us, Upcoming Events, Call to Action Sections */
+.about-us-section,
+.upcoming-events-section,
+.call-to-action-section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-us-section h2,
+.upcoming-events-section h2,
+.call-to-action-section h2 {
+  font-size: 1.75em;
+  color: #004b87;
+}
+
+.about-us-section p,
+.upcoming-events-section ul,
+.call-to-action-section p {
+  font-size: 1.2em;
+}
+
+.upcoming-events-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.upcoming-events-section li {
+  margin: 10px 0;
+}
+
+.upcoming-events-section li::before {
+  content: '•';
+  color: #004b87;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin: 20px auto; /* Centers the section horizontally */
+  padding: 20px;
+  background-color: #D3D3D3;
+  border: 1px solid #ddd;
+  max-width: 800px; /* Optional: sets a maximum width */
+  text-align: center; /* Centers the text inside the section */
+  border-radius: 10px; /* Adds rounded corners */
+}
+
+.achievements-section h2 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+  color: #004b87; /* Dark Blue */
+}
+
+.achievements-section ul {
+  list-style-type: disc;
+  padding-left: 0; /* Removes the default padding */
+  margin: 0 auto; /* Centers the list horizontally */
+  display: inline-block; /* Ensures the list is centered */
+}
+
+.achievements-section li {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+/* Highlights Section */
+.highlights-section {
+  padding: 10px;
+  margin: 20px auto;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Gradient background for vibrancy */
+  border-radius: 10px;
+  max-width: 1000px; /* Set a maximum width */
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  height: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for a 3D effect */
+}
+
+.highlights-wrapper {
+  display: flex;
+  width: auto; /* Adjust to fit the content */
+  animation: scroll 20s linear infinite;
+}
+
+.highlight-item {
+  flex: 0 0 auto; /* Let the item size itself */
+  box-sizing: border-box;
+  padding: 15px; /* Increase padding for larger boxes */
+  text-align: center;
+  background: #ffffff; /* Set background to white for better contrast */
+  margin-right: 15px; /* Increase margin for spacing */
+  border: 2px solid #004b87; /* Dark Blue border for contrast */
+  border-radius: 8px; /* Slightly larger border radius for modern look */
+  width: 220px; /* Increase width for larger highlight items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for a floating effect */
+}
+
+/* Scroll animation for the highlights */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll by 100% of the container width */
+  }
+}
